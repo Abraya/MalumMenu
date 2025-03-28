@@ -115,7 +115,7 @@ public static class VersionShower_Start
     }
 }
 
-[HarmonyPatch(typeof(PingTracker), nameof(PingTracker.Update))]
+/*[HarmonyPatch(typeof(PingTracker), nameof(PingTracker.Update))]
 public static class PingTracker_Update
 {
     // Postfix patch of PingTracker.Update to show mod name & ping
@@ -135,7 +135,7 @@ public static class PingTracker_Update
         __instance.text.text = $"MalumMenu by scp222thj\n{Utils.getColoredPingText(AmongUsClient.Instance.Ping)}";
         
     }
-}
+}*/
 
 [HarmonyPatch(typeof(HatManager), nameof(HatManager.Initialize))]
 public static class HatManager_Initialize
