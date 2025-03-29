@@ -92,7 +92,7 @@ public partial class MalumMenu : BasePlugin
         {
             if (scene.name == "MainMenu")
             {
-                ModManager.Instance.ShowModStamp(); // Required by InnerSloth Modding Policy
+                //ModManager.Instance.ShowModStamp(); // Required by InnerSloth Modding Policy
 
                 //Warn about unsupported AU versions
                 if (!supportedAU.Contains(Application.version)){
