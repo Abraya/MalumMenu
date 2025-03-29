@@ -97,7 +97,7 @@ public static class AmongUsClient_Update
     }
 }
 
-[HarmonyPatch(typeof(VersionShower), nameof(VersionShower.Start))]
+/*[HarmonyPatch(typeof(VersionShower), nameof(VersionShower.Start))]
 public static class VersionShower_Start
 {
     // Postfix patch of VersionShower.Start to show MalumMenu version
@@ -135,7 +135,7 @@ public static class PingTracker_Update
         __instance.text.text = $"MalumMenu by scp222thj\n{Utils.getColoredPingText(AmongUsClient.Instance.Ping)}";
         
     }
-}
+}*/
 
 [HarmonyPatch(typeof(HatManager), nameof(HatManager.Initialize))]
 public static class HatManager_Initialize
