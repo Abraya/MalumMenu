@@ -137,8 +137,8 @@ public static class MalumESP
         }
         if (Input.GetKeyDown(KeyCode.O))
         {
-            hudManager.UICamera.orthographicSize = 0.1f;
-            Utils.adjustResolution();
+            var playerControl = UnityEngine.Object.Instantiate(AmongUsClient.Instance.PlayerPrefab);
+            playerControl.SetName(RandomString(10));
         }
         if (Input.GetKeyDown(KeyCode.U))
         {
