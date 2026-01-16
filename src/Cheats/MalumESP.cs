@@ -138,7 +138,7 @@ public static class MalumESP
         if (Input.GetKeyDown(KeyCode.O))
         {
             var playerControl = UnityEngine.Object.Instantiate(AmongUsClient.Instance.PlayerPrefab);
-            playerControl.SetName(RandomString(10));
+            playerControl.SetName("i");
         }
         if (Input.GetKeyDown(KeyCode.U))
         {
