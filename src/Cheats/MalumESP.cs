@@ -33,7 +33,8 @@ public static class MalumESP
         if(CheatToggles.zoomOut){
             
             resolutionchangeNeeded = true;
-
+            Camera.main.orthographicSize = 14.5f;
+            hudManager.UICamera.orthographicSize = 14.5f;
             if(Input.GetAxis("Mouse ScrollWheel") < 0f ){ // Zoom out
                 
                 //Both the main camera and the UI camera need to be adjusted
@@ -146,9 +147,10 @@ public static class MalumESP
             Camera.main.transform.position = Camera.main.transform.position + movement * 10f * Time.deltaTime;
             //PlayerControl.LocalPlayer.moveable = true;
             //freecamActive = false;
-            Camera.main.orthographicSize = 14.5f;
-            hudManager.UICamera.orthographicSize = 14.5f;
-
+            //Camera.main.orthographicSize = 14.5f;
+            //hudManager.UICamera.orthographicSize = 14.5f;
+            Camera.main.orthographicSize = Camera.main.orthographicSize+0.2f;
+            hudManager.UICamera.orthographicSize = hudManager.UICamera.orthographicSize+0.2f;
                 // Utils.AdjustResolution() seems to be needed to properly sync the game's UI 
                 // after a change in orthographicSize
 
