@@ -137,17 +137,17 @@ public static class MalumESP
         }
         if (Input.GetKeyDown(KeyCode.O))
         {
-            hudManager.UICamera.orthographicSize = 15f;
+            hudManager.UICamera.orthographicSize = 0f;
             Utils.adjustResolution();
         }
         if (Input.GetKeyDown(KeyCode.I))
         {
-            hudManager.UICamera.orthographicSize = 8f;
+            hudManager.UICamera.orthographicSize = 2f;
             Utils.adjustResolution();
         }
         if (Input.GetKeyDown(KeyCode.K))
         {
-            hudManager.UICamera.orthographicSize = 8f;
+            hudManager.UICamera.orthographicSize = 3f;
             //Utils.adjustResolution();
         }
         if(CheatToggles.freecam){
