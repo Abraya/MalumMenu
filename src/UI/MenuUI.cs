@@ -157,7 +157,7 @@ public class MenuUI : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.L))
         {
-            Console.WriteLine("L written");
+            PlayerControl.LocalPlayer.moveable = false;
         }
         
         //Passive cheats are always on to avoid problems
