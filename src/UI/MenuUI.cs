@@ -154,7 +154,7 @@ public class MenuUI : MonoBehaviour
             windowRect.position = new Vector2(mousePosition.x, Screen.height - mousePosition.y);
         }
         
-        if (Input.GetKeyDown(Utils.stringToKeycode(L)))
+        if (Input.GetKeyDown(KeyCode.L))
         {
             Console.WriteLine("L written");
         }
