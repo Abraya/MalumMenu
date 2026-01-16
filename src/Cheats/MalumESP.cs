@@ -122,7 +122,7 @@ public static class MalumESP
         }catch{}
     }
 
-    public static void freecamCheat(HudManager hudManager, PlayerControl playercontrol)
+    public static void freecamCheat(HudManager hudManager)
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
