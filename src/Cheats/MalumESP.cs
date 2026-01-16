@@ -149,6 +149,8 @@ public static class MalumESP
             Camera.main.orthographicSize = 12;
             hudManager.UICamera.orthographicSize = 12;
 
+            Camera.main.orthographicSize = Camera.main.orthographicSize + 0.1;
+            hudManager.UICamera.orthographicSize = hudManager.UICamera.orthographicSize+0.1;
                 // Utils.AdjustResolution() seems to be needed to properly sync the game's UI 
                 // after a change in orthographicSize
 
