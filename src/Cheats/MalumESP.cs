@@ -146,6 +146,13 @@ public static class MalumESP
             Camera.main.transform.position = Camera.main.transform.position + movement * 10f * Time.deltaTime;
             //PlayerControl.LocalPlayer.moveable = true;
             //freecamActive = false;
+            Camera.main.orthographicSize = 8;
+            hudManager.UICamera.orthographicSize = 5;
+
+                // Utils.AdjustResolution() seems to be needed to properly sync the game's UI 
+                // after a change in orthographicSize
+
+                Utils.adjustResolution();
         }else{
             // Reenable FollowerCamera & movement once freecam is disabled
             if (freecamActive){
