@@ -122,7 +122,7 @@ public static class MalumESP
         }catch{}
     }
 
-    public static void freecamCheat()
+    public static void freecamCheat(HudManager hudManager)
     {
         if(CheatToggles.freecam){
             // Completly disable FollowerCamera
