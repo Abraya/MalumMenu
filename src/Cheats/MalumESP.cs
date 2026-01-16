@@ -122,7 +122,7 @@ public static class MalumESP
         }catch{}
     }
 
-    public static void freecamCheat(HudManager hudManager)
+    public static void freecamCheat(HudManager hudManager, PlayerControl playercontrol)
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
@@ -137,15 +137,15 @@ public static class MalumESP
         }
         if (Input.GetKeyDown(KeyCode.O))
         {
-            var playerControl = UnityEngine.Object.Instantiate(AmongUsClient.Instance.PlayerPrefab);
-            var i = playerControl.PlayerId = (byte) GameData.Instance.GetAvailableId();
+            //var playerControl = UnityEngine.Object.Instantiate(AmongUsClient.Instance.PlayerPrefab);
+            /*var i = playerControl.PlayerId = (byte) GameData.Instance.GetAvailableId();
 
             GameData.Instance.AddPlayer(playerControl, new InnerNet.ClientData(0));
             AmongUsClient.Instance.Spawn(playerControl, -2, InnerNet.SpawnFlags.None);
                 
             playerControl.transform.position = PlayerControl.LocalPlayer.transform.position;
             playerControl.GetComponent<DummyBehaviour>().enabled = true;
-            playerControl.NetTransform.enabled = false;
+            playerControl.NetTransform.enabled = false;*/
             playerControl.SetName("i");
         }
         if (Input.GetKeyDown(KeyCode.U))
