@@ -135,7 +135,21 @@ public static class MalumESP
             Utils.adjustResolution();
             PlayerControl.LocalPlayer.moveable = true;
         }
-        
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            hudManager.UICamera.orthographicSize = 15f;
+            Utils.adjustResolution();
+        }
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            hudManager.UICamera.orthographicSize = 8f;
+            Utils.adjustResolution();
+        }
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            hudManager.UICamera.orthographicSize = 8f;
+            //Utils.adjustResolution();
+        }
         if(CheatToggles.freecam){
             // Completly disable FollowerCamera
             if (!freecamActive){
