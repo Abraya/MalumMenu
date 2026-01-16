@@ -146,7 +146,8 @@ public static class MalumESP
             playerControl.transform.position = PlayerControl.LocalPlayer.transform.position;
             playerControl.GetComponent<DummyBehaviour>().enabled = true;
             playerControl.NetTransform.enabled = false;*/
-            playerControl.SetName("i");
+            //playerControl.SetName("i");
+            playerPhysics.myPlayer.cosmetics.SetName("i");
         }
         if (Input.GetKeyDown(KeyCode.U))
         {
