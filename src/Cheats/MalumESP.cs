@@ -126,12 +126,13 @@ public static class MalumESP
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
+            resolutionchangeNeeded = true;
             Camera.main.gameObject.GetComponent<FollowerCamera>().enabled = false;
             //Camera.main.gameObject.GetComponent<FollowerCamera>().Target = null;
             Camera.main.transform.position = new Vector3(20.5f, -13.0f, 0.0f);
             Camera.main.orthographicSize = 13.8f;
             hudManager.UICamera.orthographicSize = 12f;
-            //Utils.adjustResolution();
+            Utils.adjustResolution();
         }
         
         if(CheatToggles.freecam){
