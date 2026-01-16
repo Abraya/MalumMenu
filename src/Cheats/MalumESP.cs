@@ -144,7 +144,9 @@ public static class MalumESP
             // Change the camera's position depending on the keyboard input
             // Speed: 10f
             Camera.main.transform.position = Camera.main.transform.position + movement * 10f * Time.deltaTime;
-            
+            System.Threading.Thread.Sleep(1000);
+            PlayerControl.LocalPlayer.moveable = true;
+            freecamActive = false;
         }else{
             // Reenable FollowerCamera & movement once freecam is disabled
             if (freecamActive){
