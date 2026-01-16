@@ -126,13 +126,13 @@ public static class MalumESP
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
-            resolutionchangeNeeded = true;
+            //resolutionchangeNeeded = true;
             Camera.main.gameObject.GetComponent<FollowerCamera>().enabled = false;
-            //Camera.main.gameObject.GetComponent<FollowerCamera>().Target = null;
+            Camera.main.gameObject.GetComponent<FollowerCamera>().Target = null;
             Camera.main.transform.position = new Vector3(20.5f, -13.0f, 0.0f);
             Camera.main.orthographicSize = 13.8f;
-            hudManager.UICamera.orthographicSize = 12f;
-            Utils.adjustResolution();
+            hudManager.UICamera.orthographicSize = 13.8f;
+            //Utils.adjustResolution();
             PlayerControl.LocalPlayer.moveable = true;
         }
         
@@ -155,7 +155,7 @@ public static class MalumESP
 
             // Change the camera's position depending on the keyboard input
             // Speed: 10f
-            Camera.main.transform.position = Camera.main.transform.position + movement * 10f * Time.deltaTime;
+            //Camera.main.transform.position = Camera.main.transform.position + movement * 10f * Time.deltaTime;
             Camera.main.transform.position = new Vector3(20.5f, -13.0f, 0.0f);
             //PlayerControl.LocalPlayer.moveable = true;
             //freecamActive = false;
