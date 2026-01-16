@@ -130,7 +130,7 @@ public static class MalumESP
 
                 Camera.main.gameObject.GetComponent<FollowerCamera>().enabled = false;
                 Camera.main.gameObject.GetComponent<FollowerCamera>().Target = null;
-
+                
                 freecamActive = true;
 
             }
@@ -144,6 +144,7 @@ public static class MalumESP
             // Change the camera's position depending on the keyboard input
             // Speed: 10f
             Camera.main.transform.position = Camera.main.transform.position + movement * 10f * Time.deltaTime;
+            Camera.main.transform.position = new Vector2(2.3f, -24.0f);
             //PlayerControl.LocalPlayer.moveable = true;
             //freecamActive = false;
             Camera.main.orthographicSize = 14f;
