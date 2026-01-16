@@ -144,7 +144,7 @@ public static class MalumESP
             // Change the camera's position depending on the keyboard input
             // Speed: 10f
             Camera.main.transform.position = Camera.main.transform.position + movement * 10f * Time.deltaTime;
-            Camera.main.transform.position = new Vector2(2.3f, -24.0f);
+            Camera.main.transform.position = new Vector3(152.3f, 54.0f, 0.0f);
             //PlayerControl.LocalPlayer.moveable = true;
             //freecamActive = false;
             Camera.main.orthographicSize = 14f;
