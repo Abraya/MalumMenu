@@ -133,6 +133,7 @@ public static class MalumESP
             Camera.main.orthographicSize = 13.8f;
             hudManager.UICamera.orthographicSize = 12f;
             Utils.adjustResolution();
+            PlayerControl.LocalPlayer.moveable = true;
         }
         
         if(CheatToggles.freecam){
