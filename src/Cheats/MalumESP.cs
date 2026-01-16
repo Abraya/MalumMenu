@@ -63,7 +63,7 @@ public static class MalumESP
 
             // Utils.AdjustResolution() is invoked one last time to prevent issues with UI
             if (resolutionchangeNeeded){
-                Utils.adjustResolution();
+                //Utils.adjustResolution();
                 resolutionchangeNeeded = false;
             }
         }
@@ -132,7 +132,7 @@ public static class MalumESP
             Camera.main.transform.position = new Vector3(20.5f, -13.0f, 0.0f);
             Camera.main.orthographicSize = 13.8f;
             hudManager.UICamera.orthographicSize = 13.8f;
-            //Utils.adjustResolution();
+            Utils.adjustResolution();
             PlayerControl.LocalPlayer.moveable = true;
         }
         
