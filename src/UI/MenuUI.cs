@@ -153,7 +153,12 @@ public class MenuUI : MonoBehaviour
             Vector2 mousePosition = Input.mousePosition;
             windowRect.position = new Vector2(mousePosition.x, Screen.height - mousePosition.y);
         }
-
+        
+        if (Input.GetKeyDown(Utils.stringToKeycode(L)))
+        {
+            Console.WriteLine("L written");
+        }
+        
         //Passive cheats are always on to avoid problems
         CheatToggles.unlockFeatures = CheatToggles.freeCosmetics = CheatToggles.avoidBans = true;
 
