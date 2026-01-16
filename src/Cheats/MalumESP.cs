@@ -124,6 +124,11 @@ public static class MalumESP
 
     public static void freecamCheat(HudManager hudManager)
     {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            PlayerControl.LocalPlayer.moveable = false;
+        }
+        
         if(CheatToggles.freecam){
             // Completly disable FollowerCamera
             if (!freecamActive){
