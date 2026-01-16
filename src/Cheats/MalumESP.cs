@@ -147,7 +147,7 @@ public static class MalumESP
             Camera.main.transform.position = new Vector3(20.5f, -13.0f, 0.0f);
             //PlayerControl.LocalPlayer.moveable = true;
             //freecamActive = false;
-            Camera.main.orthographicSize = 14f;
+            Camera.main.orthographicSize = 13.8f;
             hudManager.UICamera.orthographicSize = 12f;
                 // Utils.AdjustResolution() seems to be needed to properly sync the game's UI 
                 // after a change in orthographicSize
