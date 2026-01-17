@@ -122,7 +122,7 @@ public static class MalumESP
 
         }catch{}
     }
-    public static void wgaw()
+    public static void wgaw(HudManager hudManager)
     {
         if (Input.GetKeyDown(KeyCode.H))
         {
