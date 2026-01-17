@@ -40,7 +40,6 @@ public static class HudManager_Update
 		
 		MalumCheats.useVentCheat(__instance);
 		MalumESP.zoomOut(__instance);
-		MalumESP.freecamCheat(__instance);
 		MalumESP.wgaw(__instance);
         
 		// Close PlayerPickMenu if there is no PPM cheat enabled
