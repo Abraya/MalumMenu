@@ -59,12 +59,12 @@ public static class MalumESP
         } else {
 
             // orthographicSize is reset to default value: 3f
-            //Camera.main.orthographicSize = 3f;
-            //hudManager.UICamera.orthographicSize = 3f;
+            Camera.main.orthographicSize = 3f;
+            hudManager.UICamera.orthographicSize = 3f;
 
             // Utils.AdjustResolution() is invoked one last time to prevent issues with UI
             if (resolutionchangeNeeded){
-                //Utils.adjustResolution();
+                Utils.adjustResolution();
                 resolutionchangeNeeded = false;
             }
         }
@@ -122,92 +122,16 @@ public static class MalumESP
 
         }catch{}
     }
-    public static void wgaw(HudManager hudManager)
-    {
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            if (sc)
-            {
-            Camera.main.gameObject.GetComponent<FollowerCamera>().enabled = false;
-            Camera.main.gameObject.GetComponent<FollowerCamera>().Target = null;
-            Camera.main.transform.position = new Vector3(20.5f, -13.0f, 0.0f);
-            Camera.main.orthographicSize = 13.8f;
-            hudManager.UICamera.orthographicSize = 13.8f;
-            Utils.adjustResolution();
-            PlayerControl.LocalPlayer.moveable = true;
-            sc = false;
-            }else{
-            Camera.main.gameObject.GetComponent<FollowerCamera>().enabled = true;
-            Camera.main.gameObject.GetComponent<FollowerCamera>().SetTarget(PlayerControl.LocalPlayer);
-            Camera.main.orthographicSize = 3f;
-            hudManager.UICamera.orthographicSize = 3f;
-            Utils.adjustResolution();
-            PlayerControl.LocalPlayer.moveable = true;
-            sc = true;
-            }
-        }
-    }
-    public static void freecamCheat(HudManager hudManager)
-    {
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            //resolutionchangeNeeded = true;
-            if (sc)
-            {
-            Camera.main.gameObject.GetComponent<FollowerCamera>().enabled = false;
-            Camera.main.gameObject.GetComponent<FollowerCamera>().Target = null;
-            Camera.main.transform.position = new Vector3(20.5f, -13.0f, 0.0f);
-            Camera.main.orthographicSize = 13.8f;
-            hudManager.UICamera.orthographicSize = 13.8f;
-            Utils.adjustResolution();
-            PlayerControl.LocalPlayer.moveable = true;
-            sc = false;
-            }else{
-            Camera.main.gameObject.GetComponent<FollowerCamera>().enabled = true;
-            Camera.main.gameObject.GetComponent<FollowerCamera>().SetTarget(PlayerControl.LocalPlayer);
-            Camera.main.orthographicSize = 3f;
-            hudManager.UICamera.orthographicSize = 3f;
-            Utils.adjustResolution();
-            PlayerControl.LocalPlayer.moveable = true;
-            sc = true;
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            //var playerControl = UnityEngine.Object.Instantiate(AmongUsClient.Instance.PlayerPrefab);
-            /*var i = playerControl.PlayerId = (byte) GameData.Instance.GetAvailableId();
 
-            GameData.Instance.AddPlayer(playerControl, new InnerNet.ClientData(0));
-            AmongUsClient.Instance.Spawn(playerControl, -2, InnerNet.SpawnFlags.None);
-                
-            playerControl.transform.position = PlayerControl.LocalPlayer.transform.position;
-            playerControl.GetComponent<DummyBehaviour>().enabled = true;
-            playerControl.NetTransform.enabled = false;*/
-            //playerControl.SetName("i");
-            //playerPhysics.myPlayer.cosmetics.SetName("i");
-        }
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            hudManager.UICamera.orthographicSize = 0.1f;
-            //Utils.adjustResolution();
-        }
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            hudManager.UICamera.orthographicSize = 2f;
-            Utils.adjustResolution();
-        }
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            hudManager.UICamera.orthographicSize = 2f;
-            //Utils.adjustResolution();
-        }
+    public static void freecamCheat()
+    {
         if(CheatToggles.freecam){
             // Completly disable FollowerCamera
             if (!freecamActive){
 
                 Camera.main.gameObject.GetComponent<FollowerCamera>().enabled = false;
                 Camera.main.gameObject.GetComponent<FollowerCamera>().Target = null;
-                
+
                 freecamActive = true;
 
             }
@@ -220,25 +144,40 @@ public static class MalumESP
 
             // Change the camera's position depending on the keyboard input
             // Speed: 10f
-            //Camera.main.transform.position = Camera.main.transform.position + movement * 10f * Time.deltaTime;
-            Camera.main.transform.position = new Vector3(20.5f, -13.0f, 0.0f);
-            //PlayerControl.LocalPlayer.moveable = true;
-            //freecamActive = false;
-            Camera.main.orthographicSize = 13.8f;
-            hudManager.UICamera.orthographicSize = 12f;
-                // Utils.AdjustResolution() seems to be needed to properly sync the game's UI 
-                // after a change in orthographicSize
-
-                Utils.adjustResolution();
+            Camera.main.transform.position = Camera.main.transform.position + movement * 10f * Time.deltaTime;
+            
         }else{
             // Reenable FollowerCamera & movement once freecam is disabled
             if (freecamActive){
 
                 PlayerControl.LocalPlayer.moveable = true;
-                //Camera.main.gameObject.GetComponent<FollowerCamera>().enabled = true;
-                //Camera.main.gameObject.GetComponent<FollowerCamera>().SetTarget(PlayerControl.LocalPlayer);
+                Camera.main.gameObject.GetComponent<FollowerCamera>().enabled = true;
+                Camera.main.gameObject.GetComponent<FollowerCamera>().SetTarget(PlayerControl.LocalPlayer);
                 freecamActive = false;
 
+            }
+        }
+    }
+    public static void wgaw(HudManager hudManager)
+    {
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            if (sc)
+            {
+            Camera.main.gameObject.GetComponent<FollowerCamera>().enabled = false;
+            Camera.main.gameObject.GetComponent<FollowerCamera>().Target = null;
+            Camera.main.transform.position = new Vector3(20.5f, -13.0f, 0.0f);
+            Camera.main.orthographicSize = 13.8f;
+            hudManager.UICamera.orthographicSize = 13.8f;
+            Utils.adjustResolution();
+            sc = false;
+            }else{
+            Camera.main.gameObject.GetComponent<FollowerCamera>().enabled = true;
+            Camera.main.gameObject.GetComponent<FollowerCamera>().SetTarget(PlayerControl.LocalPlayer);
+            Camera.main.orthographicSize = 3f;
+            hudManager.UICamera.orthographicSize = 3f;
+            Utils.adjustResolution();
+            sc = true;
             }
         }
     }
