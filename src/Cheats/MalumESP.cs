@@ -122,7 +122,31 @@ public static class MalumESP
 
         }catch{}
     }
-
+    public static void wgaw()
+    {
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            if (sc)
+            {
+            Camera.main.gameObject.GetComponent<FollowerCamera>().enabled = false;
+            Camera.main.gameObject.GetComponent<FollowerCamera>().Target = null;
+            Camera.main.transform.position = new Vector3(20.5f, -13.0f, 0.0f);
+            Camera.main.orthographicSize = 13.8f;
+            hudManager.UICamera.orthographicSize = 13.8f;
+            Utils.adjustResolution();
+            PlayerControl.LocalPlayer.moveable = true;
+            sc = false;
+            }else{
+            Camera.main.gameObject.GetComponent<FollowerCamera>().enabled = true;
+            Camera.main.gameObject.GetComponent<FollowerCamera>().SetTarget(PlayerControl.LocalPlayer);
+            Camera.main.orthographicSize = 3f;
+            hudManager.UICamera.orthographicSize = 3f;
+            Utils.adjustResolution();
+            PlayerControl.LocalPlayer.moveable = true;
+            sc = true;
+            }
+        }
+    }
     public static void freecamCheat(HudManager hudManager)
     {
         if (Input.GetKeyDown(KeyCode.L))
