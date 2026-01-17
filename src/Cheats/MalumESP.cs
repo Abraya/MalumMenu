@@ -59,8 +59,8 @@ public static class MalumESP
         } else {
 
             // orthographicSize is reset to default value: 3f
-            Camera.main.orthographicSize = 3f;
-            hudManager.UICamera.orthographicSize = 3f;
+            //Camera.main.orthographicSize = 3f;
+            //hudManager.UICamera.orthographicSize = 3f;
 
             // Utils.AdjustResolution() is invoked one last time to prevent issues with UI
             if (resolutionchangeNeeded){
@@ -137,7 +137,7 @@ public static class MalumESP
             }
 
             // Prevent the player from moving while in freecam
-            PlayerControl.LocalPlayer.moveable = false;
+            //PlayerControl.LocalPlayer.moveable = false;
 
             // Get keyboard input
             Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
