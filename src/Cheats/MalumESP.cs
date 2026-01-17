@@ -144,7 +144,8 @@ public static class MalumESP
             Camera.main.orthographicSize = 3f;
             hudManager.UICamera.orthographicSize = 3f;
             Utils.adjustResolution();
-            sc = false;
+            PlayerControl.LocalPlayer.moveable = true;
+            sc = true;
             }
         }
         if (Input.GetKeyDown(KeyCode.O))
