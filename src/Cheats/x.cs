@@ -1,4 +1,3 @@
-
 using UnityEngine;
 using Sentry.Internal.Extensions;
 
@@ -31,4 +30,3 @@ public static class x
         }
     }
 }
-
