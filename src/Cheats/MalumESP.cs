@@ -6,7 +6,6 @@ public static class MalumESP
 {
     public static bool freecamActive;
     public static bool resolutionchangeNeeded;
-    public static bool z;
     public static void sporeCloudVision(Mushroom mushroom)
     {
         if (CheatToggles.fullBright)
