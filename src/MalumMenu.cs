@@ -95,9 +95,9 @@ public partial class MalumMenu : BasePlugin
                 //ModManager.Instance.ShowModStamp(); // Required by InnerSloth Modding Policy
 
                 //Warn about unsupported AU versions
-                if (!supportedAU.Contains(Application.version)){
+                /*if (!supportedAU.Contains(Application.version)){
                     Utils.showPopup("\nThis version of MalumMenu and this version of Among Us are incompatible\n\nInstall the right version to avoid problems");
-                }
+                }*/
             }
         }));
     }
