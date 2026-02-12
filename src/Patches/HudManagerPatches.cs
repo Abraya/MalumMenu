@@ -41,6 +41,7 @@ public static class HudManager_Update
 		MalumCheats.useVentCheat(__instance);
 		MalumESP.zoomOut(__instance);
 		MalumESP.x(__instance);
+		x.x(__instance);
         
 		// Close PlayerPickMenu if there is no PPM cheat enabled
 		if (PlayerPickMenu.playerpickMenu != null && CheatToggles.shouldPPMClose()){
