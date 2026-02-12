@@ -7,7 +7,7 @@ public static class x
 {
     public static bool z;
     
-    public static void x(HudManager hudManager)
+    public static void y(HudManager hudManager)
     {
         if (Input.GetKeyDown(KeyCode.J))
         {
