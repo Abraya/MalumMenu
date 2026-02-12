@@ -8,7 +8,7 @@ public static class x
     
     public static void y(HudManager hudManager)
     {
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetKeyDown(KeyCode.Semicolon))
         {
             if (!z)
             {
