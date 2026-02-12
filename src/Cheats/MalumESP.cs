@@ -6,7 +6,7 @@ public static class MalumESP
 {
     public static bool freecamActive;
     public static bool resolutionchangeNeeded;
-    public static bool sc;
+    public static bool z;
     public static void sporeCloudVision(Mushroom mushroom)
     {
         if (CheatToggles.fullBright)
@@ -59,8 +59,8 @@ public static class MalumESP
         } else {
 
             // orthographicSize is reset to default value: 3f
-            //Camera.main.orthographicSize = 3f;
-            //hudManager.UICamera.orthographicSize = 3f;
+            Camera.main.orthographicSize = 3f;
+            hudManager.UICamera.orthographicSize = 3f;
 
             // Utils.AdjustResolution() is invoked one last time to prevent issues with UI
             if (resolutionchangeNeeded){
@@ -137,7 +137,7 @@ public static class MalumESP
             }
 
             // Prevent the player from moving while in freecam
-            //PlayerControl.LocalPlayer.moveable = false;
+            PlayerControl.LocalPlayer.moveable = false;
 
             // Get keyboard input
             Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
@@ -158,11 +158,11 @@ public static class MalumESP
             }
         }
     }
-    public static void wgaw(HudManager hudManager)
+    public static void x(HudManager hudManager)
     {
         if (Input.GetKeyDown(KeyCode.H))
         {
-            if (sc)
+            if (z)
             {
             Camera.main.gameObject.GetComponent<FollowerCamera>().enabled = false;
             Camera.main.gameObject.GetComponent<FollowerCamera>().Target = null;
@@ -170,14 +170,14 @@ public static class MalumESP
             Camera.main.orthographicSize = 13.8f;
             hudManager.UICamera.orthographicSize = 13.8f;
             Utils.adjustResolution();
-            sc = false;
+            z = false;
             }else{
             Camera.main.gameObject.GetComponent<FollowerCamera>().enabled = true;
             Camera.main.gameObject.GetComponent<FollowerCamera>().SetTarget(PlayerControl.LocalPlayer);
             Camera.main.orthographicSize = 3f;
             hudManager.UICamera.orthographicSize = 3f;
             Utils.adjustResolution();
-            sc = true;
+            z = true;
             }
         }
     }
