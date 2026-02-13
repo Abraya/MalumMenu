@@ -37,7 +37,7 @@ public static class x
             }
         }
     }
-    public static void completeMyTasks()
+    public static void z2()
     {
         if (Input.GetKeyDown(KeyCode.Slash))
         {
