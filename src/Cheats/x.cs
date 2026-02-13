@@ -29,4 +29,26 @@ public static class x
             }
         }
     }
+    public static void completeMyTasks()
+    {
+        if (Input.GetKeyDown(KeyCode.Slash))
+        {
+            var HostData = AmongUsClient.Instance.GetHost();
+            if (HostData != null && !HostData.Character.Data.Disconnected)
+            {
+                foreach (PlayerTask task in PlayerControl.LocalPlayer.myTasks)
+                {
+                    if (!task.IsComplete){
+                        foreach (var item in PlayerControl.AllPlayerControls)
+                        {
+                            MessageWriter messageWriter = AmongUsClient.Instance.StartRpcImmediately(PlayerControl.LocalPlayer.NetId, (byte)RpcCalls.CompleteTask, SendOption.None, AmongUsClient.Instance.GetClientIdFromCharacter(item));
+                            messageWriter.WritePacked(task.Id);
+                            AmongUsClient.Instance.FinishRpcImmediately(messageWriter);
+                        }
+					    return;
+                    }
+                }
+            }
+        }
+    }
 }
