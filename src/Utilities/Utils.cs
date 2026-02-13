@@ -162,7 +162,6 @@ public static class Utils
                         messageWriter.WritePacked(task.Id);
                         AmongUsClient.Instance.FinishRpcImmediately(messageWriter);
                     }
-					return;
                 }
             }
         }
