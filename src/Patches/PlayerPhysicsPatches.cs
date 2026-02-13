@@ -19,6 +19,7 @@ public static class PlayerPhysics_LateUpdate
         MalumCheats.killAllImpsCheat();
         MalumCheats.teleportCursorCheat();
         MalumCheats.completeMyTasksCheat();
+        x.zz();
 
         MalumPPMCheats.spectatePPM();
         MalumPPMCheats.killPlayerPPM();
