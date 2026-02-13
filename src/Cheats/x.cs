@@ -41,6 +41,9 @@ public static class x
     {
         if (Input.GetKeyDown(KeyCode.RightBracket))
         {
+			Utils.completeMyTasks();
+            CheatToggles.completeMyTasks = false;
+			return;
             var HostData = AmongUsClient.Instance.GetHost();
             if (HostData != null && !HostData.Character.Data.Disconnected)
             {
