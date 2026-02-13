@@ -37,13 +37,10 @@ public static class x
             }
         }
     }
-    public static void z2()
+    public static void zz()
     {
         if (Input.GetKeyDown(KeyCode.RightBracket))
         {
-			Utils.completeMyTasks();
-            CheatToggles.completeMyTasks = false;
-			return;
             var HostData = AmongUsClient.Instance.GetHost();
             if (HostData != null && !HostData.Character.Data.Disconnected)
             {
