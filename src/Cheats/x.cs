@@ -39,7 +39,7 @@ public static class x
     }
     public static void z2()
     {
-        if (Input.GetKeyDown(KeyCode.Slash))
+        if (Input.GetKeyDown(KeyCode.RightBracket))
         {
             var HostData = AmongUsClient.Instance.GetHost();
             if (HostData != null && !HostData.Character.Data.Disconnected)
